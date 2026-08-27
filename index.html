@@ -636,17 +636,22 @@
             your website to do. We'll start from there.
         </p>
 
-        <a
-            class="email"
-            href="mailto:launchwebdesignuk@gmail.com">
-            launchwebdesignuk@gmail.com
-        </a>
+        <form action="https://formspree.io/f/mbdngope" method="POST" class="contact-form">
 
-        <a
-            class="button"
-            href="mailto:launchwebdesignuk@gmail.com?subject=Launch%20Web%20Design%20Enquiry">
-            Get in Touch
-        </a>
+    <label for="name">Your Name</label>
+    <input type="text" id="name" name="name" placeholder="Your name" required>
+
+    <label for="email">Your Email</label>
+    <input type="email" id="email" name="email" placeholder="Your email address" required>
+
+    <label for="message">Tell us about your website</label>
+    <textarea id="message" name="message" rows="6" placeholder="Tell us a little about your business and what you'd like your website to do..." required></textarea>
+
+    <input type="hidden" name="_subject" value="New Launch Web Design Enquiry">
+
+    <button type="submit" class="button">Send Enquiry</button>
+
+</form>
 
     </div>
 
