@@ -224,6 +224,17 @@
             box-shadow: 0 5px 20px rgba(80,50,80,0.1);
         }
         .portfolio-card img {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-card img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 25px rgba(80,50,80,0.25);
+}
+        .portfolio-card img {
     display: block;
     width: 100%;
     max-width: 550px;
@@ -677,18 +688,6 @@
 <h2>See What I've Been Working On</h2>
 
 <div class="portfolio-card">
-
-    .portfolio-card img {
-    width: 100%;
-    display: block;
-    border-radius: 12px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.portfolio-card img:hover {
-    transform: scale(1.03);
-    box-shadow: 0 8px 25px rgba(80,50,80,0.25);
-}
 
 <a href="https://thedeeboproject.com" target="_blank">
     <img
