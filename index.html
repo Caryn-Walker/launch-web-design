@@ -214,7 +214,13 @@
             text-align: center;
             background: #f5edf7;
         }
-
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 30px auto;
+}
         .portfolio-card {
             background: white;
             max-width: 650px;
@@ -687,7 +693,9 @@
     
 <h2>See What I've Been Working On</h2>
 
-<div class="portfolio-card">
+<div class="portfolio-grid">
+
+    <div class="portfolio-card">
 
 <a href="https://thedeeboproject.com" target="_blank">
     <img
