@@ -607,6 +607,230 @@
         font-size: 30px;
     }
 } }
+        /* =========================
+   PORTFOLIO SHOWCASE
+   ========================= */
+
+.portfolio-grid {
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.portfolio-card {
+    background: #ffffff;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 60px;
+    border-radius: 24px;
+    box-shadow: 0 8px 30px rgba(80,50,80,0.12);
+
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    column-gap: 60px;
+    row-gap: 0;
+    align-items: center;
+}
+
+/* Laptop */
+
+.laptop {
+    grid-column: 1;
+    grid-row: 1 / span 4;
+
+    width: 100%;
+    max-width: 620px;
+    margin: 0 auto;
+    padding-bottom: 55px;
+    position: relative;
+}
+
+.laptop-screen {
+    position: relative;
+    background: linear-gradient(to bottom, #222, #111);
+    padding: 16px 16px 18px;
+    border-radius: 16px 16px 8px 8px;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.laptop-screen::before {
+    content: "";
+    display: block;
+    width: 7px;
+    height: 7px;
+    background: #555;
+    border-radius: 50%;
+    margin: -5px auto 9px;
+}
+
+.laptop-screen img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* Proper laptop base / keyboard */
+
+.laptop-base {
+    position: absolute;
+    left: -5%;
+    bottom: 0;
+    width: 110%;
+    height: 65px;
+
+    background: linear-gradient(
+        to bottom,
+        #eeeeee 0%,
+        #d5d5d5 45%,
+        #aaaaaa 100%
+    );
+
+    border-radius: 4px 4px 22px 22px;
+    box-shadow: 0 12px 20px rgba(0,0,0,0.22);
+
+    transform: perspective(500px) rotateX(8deg);
+}
+
+/* Keyboard */
+
+.laptop-base::before {
+    content: "";
+    position: absolute;
+    left: 12%;
+    top: 9px;
+    width: 76%;
+    height: 27px;
+
+    background:
+        repeating-linear-gradient(
+            to right,
+            #202020 0,
+            #202020 18px,
+            transparent 18px,
+            transparent 21px
+        );
+
+    border-radius: 5px;
+    opacity: 0.95;
+}
+
+/* Trackpad */
+
+.laptop-base::after {
+    content: "";
+    position: absolute;
+    left: 38%;
+    bottom: 6px;
+    width: 24%;
+    height: 17px;
+
+    background: #d0d0d0;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+}
+
+/* Hover */
+
+.laptop:hover .laptop-screen {
+    transform: translateY(-5px) scale(1.025);
+    box-shadow: 0 20px 38px rgba(80,50,80,0.28);
+}
+
+/* Portfolio text */
+
+.portfolio-card h3 {
+    grid-column: 2;
+    grid-row: 1;
+
+    color: #553762;
+    font-size: 34px;
+    margin: 0 0 12px;
+}
+
+.portfolio-card p {
+    grid-column: 2;
+    grid-row: 2;
+
+    font-size: 18px;
+    line-height: 1.7;
+    margin: 0 0 22px;
+}
+
+/* Feature list */
+
+.portfolio-features {
+    grid-column: 2;
+    grid-row: 3;
+
+    margin: 5px 0 25px;
+}
+
+.portfolio-features div {
+    font-size: 17px;
+    margin-bottom: 14px;
+    line-height: 1.4;
+    color: #333;
+}
+
+.portfolio-features div::first-letter {
+    color: #7b3db5;
+}
+
+/* Live website button */
+
+.portfolio-card .button {
+    grid-column: 2;
+    grid-row: 4;
+
+    justify-self: start;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .portfolio-card {
+        grid-template-columns: 1fr;
+        padding: 30px 22px;
+        gap: 20px;
+    }
+
+    .laptop {
+        grid-column: 1;
+        grid-row: 1;
+        width: 100%;
+        padding-bottom: 45px;
+    }
+
+    .portfolio-card h3 {
+        grid-column: 1;
+        grid-row: 2;
+        font-size: 28px;
+    }
+
+    .portfolio-card p {
+        grid-column: 1;
+        grid-row: 3;
+        font-size: 17px;
+    }
+
+    .portfolio-features {
+        grid-column: 1;
+        grid-row: 4;
+    }
+
+    .portfolio-card .button {
+        grid-column: 1;
+        grid-row: 5;
+        justify-self: center;
+    }
+
+    .laptop-base {
+        height: 50px;
+    }
+}
     </style>
 </head>
 
