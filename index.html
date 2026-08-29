@@ -873,6 +873,239 @@
     .laptop-base {
         height: 50px;
     }
+    /* =========================================
+   FINAL PORTFOLIO SHOWCASE
+   ========================================= */
+
+.portfolio-card {
+    background: #ffffff;
+    max-width: 1250px;
+    margin: 40px auto;
+    padding: 65px;
+    border-radius: 26px;
+    box-shadow: 0 10px 35px rgba(80, 50, 80, 0.12);
+
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 65px;
+    align-items: center;
+}
+
+/* ---------- LAPTOP ---------- */
+
+.portfolio-card .laptop {
+    width: 100%;
+    max-width: 620px;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 70px;
+}
+
+.portfolio-card .laptop-screen {
+    position: relative;
+    background: #111111;
+    padding: 14px 14px 16px;
+    border: 2px solid #333333;
+    border-radius: 18px 18px 8px 8px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.22);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-card .laptop-screen::before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 7px;
+    height: 7px;
+    background: #555555;
+    border-radius: 50%;
+}
+
+.portfolio-card .laptop-screen img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 2px;
+    border-radius: 4px;
+}
+
+/* Proper silver laptop base */
+
+.portfolio-card .laptop-base {
+    position: absolute;
+    left: -7%;
+    bottom: 5px;
+    width: 114%;
+    height: 75px;
+
+    background: linear-gradient(
+        to bottom,
+        #f3f3f3 0%,
+        #dddddd 45%,
+        #b8b8b8 100%
+    );
+
+    border-radius: 5px 5px 25px 25px;
+    box-shadow: 0 13px 22px rgba(0, 0, 0, 0.20);
+
+    transform: perspective(700px) rotateX(7deg);
+}
+
+/* Keyboard area */
+
+.portfolio-card .laptop-base::before {
+    content: "";
+    position: absolute;
+    left: 13%;
+    top: 9px;
+    width: 74%;
+    height: 34px;
+
+    background: #222222;
+    border-radius: 5px;
+
+    box-shadow:
+        inset 0 2px 2px rgba(255,255,255,0.08),
+        0 1px 2px rgba(0,0,0,0.25);
+}
+
+/* Trackpad */
+
+.portfolio-card .laptop-base::after {
+    content: "";
+    position: absolute;
+    left: 38%;
+    bottom: 7px;
+    width: 24%;
+    height: 18px;
+
+    background: #d2d2d2;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+}
+
+/* Laptop hover */
+
+.portfolio-card .laptop:hover .laptop-screen {
+    transform: translateY(-5px) scale(1.025);
+    box-shadow: 0 22px 40px rgba(80, 50, 80, 0.25);
+}
+
+/* ---------- PROJECT INFORMATION ---------- */
+
+.portfolio-card h3 {
+    color: #553762;
+    font-size: 36px;
+    margin: 0 0 20px;
+}
+
+.portfolio-card h3::after {
+    content: "";
+    display: block;
+    width: 85px;
+    height: 4px;
+    margin-top: 15px;
+    background: #7b3db5;
+    border-radius: 3px;
+}
+
+.portfolio-card p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin: 0 0 28px;
+}
+
+/* ---------- FEATURES ---------- */
+
+.portfolio-card .portfolio-features {
+    margin: 0 0 30px;
+}
+
+.portfolio-card .portfolio-features div {
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 18px;
+    font-size: 17px;
+    line-height: 1.45;
+    color: #333333;
+}
+
+/* One circled tick — CSS supplies it */
+
+.portfolio-card .portfolio-features div::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 24px;
+    height: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid #7b3db5;
+    border-radius: 50%;
+
+    color: #7b3db5;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* ---------- BUTTON ---------- */
+
+.portfolio-card .button {
+    display: inline-block;
+    padding: 16px 30px;
+    background: #a65382;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 17px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.portfolio-card .button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(80, 50, 80, 0.22);
+}
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 700px) {
+
+    .portfolio-card {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 35px 22px;
+    }
+
+    .portfolio-card .laptop {
+        grid-column: 1;
+        max-width: 100%;
+        padding-bottom: 55px;
+    }
+
+    .portfolio-card h3 {
+        font-size: 29px;
+    }
+
+    .portfolio-card p {
+        font-size: 17px;
+    }
+
+    .portfolio-card .portfolio-features div {
+        font-size: 16px;
+    }
+
+    .portfolio-card .laptop-base {
+        height: 58px;
+    }
+}
 }
     </style>
 </head>
