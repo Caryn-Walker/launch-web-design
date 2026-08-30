@@ -8,7 +8,7 @@
 
     <meta name="description" content="Affordable, professional websites for small businesses, start-ups and expat entrepreneurs. Starter websites from £199.">
 
-
+}
     <style>
         * {
             box-sizing: border-box;
@@ -37,7 +37,8 @@
     height: auto;
     display: block;
     margin: 0 auto;
-           }
+}
+        }
 
         .tagline {
             margin-top: 5px;
@@ -213,246 +214,327 @@
             text-align: center;
             background: #f5edf7;
         }
-
-    /* =========================================
-   FINAL PORTFOLIO SHOWCASE
-   ========================================= */
-
-.portfolio-card {
-    background: #ffffff;
-    max-width: 1250px;
-    margin: 40px auto;
-    padding: 65px;
-    border-radius: 26px;
-    box-shadow: 0 10px 35px rgba(80, 50, 80, 0.12);
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+        .portfolio-card {
+    background: white;
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 55px;
+    border-radius: 22px;
+    box-shadow: 0 5px 20px rgba(80,50,80,0.1);
 
     display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
-    gap: 65px;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 55px;
     align-items: center;
 }
-
-/* ---------- LAPTOP ---------- */
-
-.portfolio-card .laptop {
+        }
+        .portfolio-card img {
     width: 100%;
-    max-width: 620px;
-    margin: 0 auto;
-    position: relative;
-    padding-bottom: 70px;
-}
-
-.portfolio-card .laptop-screen {
-    position: relative;
-    background: #111111;
-    padding: 14px 14px 16px;
-    border: 2px solid #333333;
-    border-radius: 18px 18px 8px 8px;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.22);
+    display: block;
+    border-radius: 12px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.portfolio-card .laptop-screen::before {
-    content: "";
-    position: absolute;
-    top: 7px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 7px;
-    height: 7px;
-    background: #555555;
-    border-radius: 50%;
+.portfolio-card img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 25px rgba(80,50,80,0.25);
 }
-
-.portfolio-card .laptop-screen img {
-    display: block;
+      .portfolio-card img {
     width: 100%;
-    height: auto;
-    margin-top: 2px;
-    border-radius: 4px;
-}
-
-/* Proper silver laptop base */
-
-.portfolio-card .laptop-base {
-    position: absolute;
-    left: -7%;
-    bottom: 5px;
-    width: 114%;
-    height: 75px;
-
-    background: linear-gradient(
-        to bottom,
-        #f3f3f3 0%,
-        #dddddd 45%,
-        #b8b8b8 100%
-    );
-
-    border-radius: 5px 5px 25px 25px;
-    box-shadow: 0 13px 22px rgba(0, 0, 0, 0.20);
-
-    transform: perspective(700px) rotateX(7deg);
-}
-
-/* Keyboard area */
-
-.portfolio-card .laptop-base::before {
-    content: "";
-    position: absolute;
-    left: 13%;
-    top: 9px;
-    width: 74%;
-    height: 34px;
-
-    background: #222222;
-    border-radius: 5px;
-
-    box-shadow:
-        inset 0 2px 2px rgba(255,255,255,0.08),
-        0 1px 2px rgba(0,0,0,0.25);
-}
-
-/* Trackpad */
-
-.portfolio-card .laptop-base::after {
-    content: "";
-    position: absolute;
-    left: 38%;
-    bottom: 7px;
-    width: 24%;
-    height: 18px;
-
-    background: #d2d2d2;
-    border: 1px solid #aaa;
-    border-radius: 4px;
-}
-
-/* Laptop hover */
-
-.portfolio-card .laptop:hover .laptop-screen {
-    transform: translateY(-5px) scale(1.025);
-    box-shadow: 0 22px 40px rgba(80, 50, 80, 0.25);
-}
-
-/* ---------- PROJECT INFORMATION ---------- */
-
-.portfolio-card h3 {
-    color: #553762;
-    font-size: 36px;
-    margin: 0 0 20px;
-}
-
-.portfolio-card h3::after {
-    content: "";
     display: block;
-    width: 85px;
-    height: 4px;
-    margin-top: 15px;
-    background: #7b3db5;
-    border-radius: 3px;
+    border-radius: 10px;
+}
+
+.portfolio-card > a:first-child {
+    grid-column: 1;
+    grid-row: 1 / span 4;
+
+    display: block;
+    background: #1d1d1d;
+    padding: 12px 12px 18px;
+    border-radius: 14px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-card > a:first-child:hover {
+    transform: scale(1.03);
+    box-shadow: 0 18px 35px rgba(80,50,80,0.25);
+}
+        .portfolio-card h3 {
+    grid-column: 2;
+    color: #553762;
+    font-size: 32px;
+    margin: 0 0 10px;
 }
 
 .portfolio-card p {
+    grid-column: 2;
     font-size: 18px;
     line-height: 1.7;
-    margin: 0 0 28px;
+    margin: 0 0 20px;
 }
-
-/* ---------- FEATURES ---------- */
-
-.portfolio-card .portfolio-features {
-    grid-column: 2;
-    grid-row: 3;
-    margin: 0 0 30px;
-}
-
-.portfolio-card .portfolio-features div {
-    position: relative;
-    padding-left: 40px;
-    margin-bottom: 18px;
-    font-size: 17px;
-    line-height: 1.45;
-    color: #333333;
-}
-
-/* One circled tick — CSS supplies it */
-
-.portfolio-card .portfolio-features div::before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    top: 0;
-
-    width: 24px;
-    height: 24px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border: 2px solid #7b3db5;
-    border-radius: 50%;
-
-    color: #7b3db5;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-/* ---------- BUTTON ---------- */
 
 .portfolio-card .button {
     grid-column: 2;
-grid-row: 4;
-justify-self: start;
-    display: inline-block;
-    padding: 16px 30px;
-    background: #a65382;
-    color: white;
-    text-decoration: none;
-    border-radius: 30px;
+    justify-self: start;
+}
+}
+
+        .portfolio-card h3 {
+            color: #553762;
+            font-size: 26px;
+            margin-bottom: 12px;
+        }
+
+        .contact {
+            background: linear-gradient(135deg, #6d4b7d, #a96b91);
+            color: white;
+            text-align: center;
+        }
+
+        .contact h2 {
+            color: white;
+        }
+
+        .contact p {
+            max-width: 650px;
+            margin: 0 auto 25px;
+            font-size: 18px;
+        }
+
+        .email {
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 25px;
+        }
+
+        .contact .button {
+            background: white;
+            color: #6d4b7d;
+        }
+
+        footer {
+            background: #35263d;
+            color: #ddd;
+            text-align: center;
+            padding: 25px 15px;
+            font-size: 14px;
+        }
+
+/* =========================
+   CONTACT FORM
+   ========================= */
+
+.contact-form {
+    max-width: 600px;
+    margin: 30px auto 0;
+    text-align: left;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 7px;
     font-weight: bold;
-    font-size: 17px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    color: white;
 }
 
-.portfolio-card .button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 18px rgba(80, 50, 80, 0.22);
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 18px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: inherit;
+    box-sizing: border-box;
 }
 
-/* ---------- MOBILE ---------- */
+.contact-form textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: 3px solid #f7dce8;
+}
+
+.contact-form button {
+    display: block;
+    margin: 10px auto 0;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
 
 @media (max-width: 700px) {
 
-    .portfolio-card {
-        grid-template-columns: 1fr;
-        gap: 35px;
-        padding: 35px 22px;
+    .hero h1 {
+        font-size: 36px;
     }
 
-    .portfolio-card .laptop {
-        grid-column: 1;
-        max-width: 100%;
-        padding-bottom: 55px;
+    .hero p {
+        font-size: 18px;
     }
 
-    .portfolio-card h3 {
-        font-size: 29px;
+    nav a {
+        display: inline-block;
+        margin: 5px 8px;
     }
 
-    .portfolio-card p {
-        font-size: 17px;
+    section {
+        padding: 50px 18px;
     }
 
-    .portfolio-card .portfolio-features div {
-        font-size: 16px;
+    .contact-form {
+        width: 100%;
+        margin-top: 30px;
     }
 
-    .portfolio-card .laptop-base {
-        height: 58px;
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+    }
+
+    .contact-form button {
+        width: 100%;
+        max-width: 300px;
     }
 }
+}
+}
+            }
+       /* =========================
+   LAUNCH HERO SECTION
+   ========================= */
 
+.hero {
+    padding: 90px 20px 100px;
+    text-align: center;
+    background: linear-gradient(135deg, #fff 0%, #fdf7fc 55%, #f7dce8 100%);
+}
+
+.hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hero-eyebrow {
+    margin-bottom: 18px;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #a34f82;
+}
+
+.hero h1 {
+    margin: 0 auto 25px;
+    font-size: 58px;
+    line-height: 1.1;
+    color: #573565;
+    max-width: 900px;
+}
+
+.hero-text {
+    max-width: 720px;
+    margin: 0 auto 30px;
+    font-size: 22px;
+    line-height: 1.6;
+    color: #444;
+}
+
+.hero-price {
+    margin: 25px 0 12px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #a34f82;
+}
+
+.hero-price strong {
+    font-size: 34px;
+}
+
+.hero-small {
+    max-width: 650px;
+    margin: 0 auto 35px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 16px 34px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px;
+    background: #a34f82;
+    color: white;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(87, 53, 101, 0.25);
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+    .portfolio-card {
+    grid-template-columns: 1fr;
+    padding: 25px;
+    gap: 25px;
+}
+
+.portfolio-card > a:first-child,
+.portfolio-card h3,
+.portfolio-card p,
+.portfolio-card .button {
+    grid-column: 1;
+}
+
+.portfolio-card > a:first-child {
+    grid-row: auto;
+}
+
+    .hero {
+        padding: 60px 20px 70px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero-text {
+        font-size: 18px;
+    }
+
+    .hero-price {
+        font-size: 24px;
+    }
+
+    .hero-price strong {
+        font-size: 30px;
+    }
+} }
     </style>
 </head>
 
@@ -664,21 +746,16 @@ justify-self: start;
     </div>
 
 </section>
- <section id="portfolio">   
+    
 <h2>See What I've Been Working On</h2>
 <div class="portfolio-grid">
  <div class="portfolio-card">
 
-<div class="laptop">
-    <a href="https://thedeeboproject.com" target="_blank">
-        <div class="laptop-screen">
-            <img
-                src="deebo-project.jpeg.png"
-                alt="The Deebo Project website">
-        </div>
-    </a>
-    <div class="laptop-base"></div>
-</div>
+<a href="https://thedeeboproject.com" target="_blank">
+    <img
+        src="deebo-project.jpeg.png"
+        alt="The Deebo Project website">
+</a>
 <h3>The Deebo Project</h3>
   <p>
                 A website created for a business combining fitness,
@@ -740,6 +817,10 @@ justify-self: start;
 <footer>
     <p>© 2026 Launch Web Design. All rights reserved.</p>
     <p>Affordable websites for small businesses, start-ups &amp; expat entrepreneurs.</p>
+</footer>
+
+</body>
+</html>
 </footer>
 
 </body>
