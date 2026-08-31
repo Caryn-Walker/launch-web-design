@@ -330,77 +330,155 @@
 .portfolio-card {
     background: white;
     max-width: 1100px;
-    margin: 35px auto;
-    padding: 45px 50px 40px;
+    margin: 30px auto;
+    padding: 55px;
     border-radius: 22px;
-    box-shadow: 0 5px 20px rgba(80,50,80,0.1);
+    box-shadow: 0 5px 20px rgba(80,50,80,0.10);
 
     display: grid;
     grid-template-columns: 1.15fr 1fr;
-    gap: 40px;
+    gap: 55px;
     align-items: center;
 }
 
+/* Portfolio image */
 .portfolio-card > a:first-child {
-    grid-column: 1;
-    grid-row: 1 / span 2;
     display: block;
 }
-        .portfolio-card ul {
-    list-style: none;
-    padding: 0;
-    margin: 25px 0 10px;
+
+.portfolio-card img {
+    width: 100%;
+    display: block;
+    border-radius: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.portfolio-card li {
-    font-size: 1.15rem;
-    line-height: 1.7;
-    margin-bottom: 12px;
-    color: #252538;
+.portfolio-card img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(80,50,80,0.20);
 }
 
-.portfolio-card li::before {
-    content: "✓";
-    color: #6b2b80;
+/* Project title */
+.portfolio-card h3 {
+    position: relative;
+    text-align: center;
+    color: #4b176d;
+    font-size: 2.3rem;
     font-weight: 700;
-    font-size: 1.3rem;
-    margin-right: 10px;
-}
-        .portfolio-card .button {
-    grid-column: 1 / -1;
-    justify-self: center;
-    margin-top: 5px;
+    letter-spacing: 1px;
+    margin: 0 0 45px;
 }
 
-.portfolio-card > a:first-child:hover {
-    transform: scale(1.03);
-    box-shadow: 0 18px 35px rgba(80,50,80,0.25);
-}
-        .portfolio-card h3 {
-    grid-column: 2;
-    color: #553762;
-    font-size: 32px;
-    margin: 0 0 10px;
+/* Pink line above title */
+.portfolio-card h3::before {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 5px;
+    background: #e83f9f;
+    border-radius: 3px;
+    margin: 0 auto 18px;
 }
 
-.portfolio-card p {
-    grid-column: 2;
-    font-size: 18px;
+/* Purple line underneath title */
+.portfolio-card h3::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 4px;
+    background: #6b2b80;
+    border-radius: 3px;
+    margin: 18px auto 0;
+}
+
+/* Project description */
+.portfolio-card > div > p {
+    text-align: center;
+    color: #252538;
+    font-size: 1.25rem;
     line-height: 1.7;
-    margin: 0 0 20px;
+    margin-bottom: 50px;
 }
 
+/* Tick points */
+.portfolio-features {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    margin-top: 10px;
+}
+
+.portfolio-features div {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    color: #252538;
+    font-size: 1.15rem;
+    line-height: 1.4;
+    text-align: left;
+}
+
+/* Turn the existing ✓ into a proper circle */
+.portfolio-features div::first-letter {
+    color: #5d1680;
+}
+
+/* Circle around each tick */
+.portfolio-features div {
+    position: relative;
+    padding-left: 62px;
+}
+
+.portfolio-features div::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 3px solid #e83f9f;
+    border-radius: 50%;
+
+    color: #5d1680;
+    font-size: 27px;
+    font-weight: 700;
+}
+
+/* Live website button */
 .portfolio-card .button {
-    grid-column: 2;
-    justify-self: start;
-}
+    display: block;
+    width: fit-content;
+    min-width: 300px;
+    margin: 50px auto 0;
+    padding: 16px 30px;
+
+    background: #7b238c;
+    color: white;
+
+    border-radius: 12px;
+    text-decoration: none;
+
+    font-size: 1.15rem;
+    font-weight: 700;
+    text-align: center;
+
+    box-shadow: 0 5px 15px rgba(80,50,80,0.20);
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-        .portfolio-card h3 {
-            color: #553762;
-            font-size: 26px;
-            margin-bottom: 12px;
-        }
+.portfolio-card .button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(80,50,80,0.25);
+}
 
         .contact {
             background: linear-gradient(135deg, #6d4b7d, #a96b91);
@@ -821,10 +899,10 @@
                 personal training, carpentry and podcasts.
             </p>
      <div class="portfolio-features">
-    <div>✓ Modern, bold design to reflect the brand</div>
-    <div>✓ Easy navigation for a great user experience</div>
-    <div>✓ Built with mobile users in mind</div>
-    <div>✓ Showcases three key areas of the business</div>
+  <div>Modern, bold design to reflect the brand</div>
+<div>Easy navigation for a great user experience</div>
+<div>Built with mobile users in mind</div>
+<div>Showcases three key areas of the business</div>
 </div>
 
             <br>
