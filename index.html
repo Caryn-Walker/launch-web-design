@@ -341,36 +341,41 @@
     align-items: center;
 }
 
-/* Portfolio image */
+/* Website image */
 .portfolio-card > a:first-child {
     display: block;
 }
 
-.portfolio-card img {
+.portfolio-card > a:first-child img {
     width: 100%;
     display: block;
     border-radius: 16px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.portfolio-card img:hover {
+.portfolio-card > a:first-child img:hover {
     transform: scale(1.02);
     box-shadow: 0 8px 25px rgba(80,50,80,0.20);
 }
 
-/* Project title */
-.portfolio-card h3 {
+/* Right-hand project content */
+.portfolio-content {
+    text-align: center;
+}
+
+/* Project heading */
+.portfolio-content h3 {
     position: relative;
     text-align: center;
     color: #4b176d;
     font-size: 2.3rem;
     font-weight: 700;
     letter-spacing: 1px;
-    margin: 0 0 45px;
+    margin: 0 0 35px;
 }
 
-/* Pink line above title */
-.portfolio-card h3::before {
+/* Pink line above heading */
+.portfolio-content h3::before {
     content: "";
     display: block;
     width: 80px;
@@ -380,8 +385,8 @@
     margin: 0 auto 18px;
 }
 
-/* Purple line underneath title */
-.portfolio-card h3::after {
+/* Purple line below heading */
+.portfolio-content h3::after {
     content: "";
     display: block;
     width: 70px;
@@ -391,16 +396,16 @@
     margin: 18px auto 0;
 }
 
-/* Project description */
-.portfolio-card > div > p {
+/* Description */
+.portfolio-content > p {
     text-align: center;
     color: #252538;
     font-size: 1.25rem;
     line-height: 1.7;
-    margin-bottom: 50px;
+    margin: 0 0 45px;
 }
 
-/* Tick points */
+/* Tick list */
 .portfolio-features {
     display: flex;
     flex-direction: column;
@@ -408,10 +413,14 @@
     margin-top: 10px;
 }
 
+/* Individual tick */
 .portfolio-features div {
+    position: relative;
     display: flex;
     align-items: center;
-    gap: 18px;
+
+    min-height: 48px;
+    padding-left: 62px;
 
     color: #252538;
     font-size: 1.15rem;
@@ -419,19 +428,10 @@
     text-align: left;
 }
 
-/* Turn the existing ✓ into a proper circle */
-.portfolio-features div::first-letter {
-    color: #5d1680;
-}
-
-/* Circle around each tick */
-.portfolio-features div {
-    position: relative;
-    padding-left: 62px;
-}
-
+/* Pink circle with purple tick */
 .portfolio-features div::before {
     content: "✓";
+
     position: absolute;
     left: 0;
     top: 50%;
@@ -453,11 +453,12 @@
 }
 
 /* Live website button */
-.portfolio-card .button {
-    display: block;
-    width: fit-content;
+.portfolio-card > .button {
+    grid-column: 1 / -1;
+
+    justify-self: center;
+
     min-width: 300px;
-    margin: 50px auto 0;
     padding: 16px 30px;
 
     background: #7b238c;
@@ -475,11 +476,10 @@
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.portfolio-card .button:hover {
+.portfolio-card > .button:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(80,50,80,0.25);
 }
-
         .contact {
             background: linear-gradient(135deg, #6d4b7d, #a96b91);
             color: white;
@@ -814,26 +814,38 @@
 
             <div class="package-price">£199</div>
 
-            <ul>
-                <li>Professional website — up to 3 pages</li>
-                <li>Domain name included for the first year</li>
-                <li>Mobile-friendly design</li>
-                <li>Contact / enquiry section</li>
-                <li>Basic SEO setup</li>
-                <li>Social media links</li>
-                <li>Help getting your website live</li>
-            </ul>
+<a
+    href="https://thedeeboproject.com"
+    target="_blank">
+    <img
+        src="YOUR_EXISTING_DEEBO_IMAGE_HERE"
+        alt="The Deebo Project website">
+</a>
 
-            <p>
-                <strong>Need more?</strong> No problem.
-                Your website can grow with your business.
-            </p>
+<div class="portfolio-content">
 
-        </div>
+    <h3>The Deebo Project</h3>
 
+    <p>
+        A website created for a business combining fitness,
+        personal training, carpentry and podcasts.
+    </p>
+
+    <div class="portfolio-features">
+        <div>Modern, bold design to reflect the brand</div>
+        <div>Easy navigation for a great user experience</div>
+        <div>Built with mobile users in mind</div>
+        <div>Showcases three key areas of the business</div>
     </div>
 
-</section>
+</div>
+
+<a
+    href="https://thedeeboproject.com"
+    target="_blank"
+    class="button">
+    View live Website ↗
+</a>
 
 <section>
 
