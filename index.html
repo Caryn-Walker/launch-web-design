@@ -309,19 +309,7 @@
     max-width: 1000px;
     margin: 30px auto;
 }
-        .portfolio-card {
-    background: white;
-    max-width: 1100px;
-    margin: 30px auto;
-    padding: 55px;
-    border-radius: 22px;
-    box-shadow: 0 5px 20px rgba(80,50,80,0.1);
-
-    display: grid;
-    grid-template-columns: 1.15fr 1fr;
-    gap: 55px;
-    align-items: center;
-}
+        .
         
         .portfolio-card img {
     width: 100%;
@@ -339,18 +327,49 @@
     display: block;
     border-radius: 10px;
 }
+.portfolio-card {
+    background: white;
+    max-width: 1100px;
+    margin: 35px auto;
+    padding: 45px 50px 40px;
+    border-radius: 22px;
+    box-shadow: 0 5px 20px rgba(80,50,80,0.1);
+
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
 
 .portfolio-card > a:first-child {
     grid-column: 1;
-    grid-row: 1 / span 4;
-
+    grid-row: 1 / span 2;
     display: block;
-    background: #1d1d1d;
-    padding: 12px 12px 18px;
-    border-radius: 14px;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+}
+        .portfolio-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 25px 0 10px;
+}
 
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.portfolio-card li {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    margin-bottom: 12px;
+    color: #252538;
+}
+
+.portfolio-card li::before {
+    content: "✓";
+    color: #6b2b80;
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-right: 10px;
+}
+        .portfolio-card .button {
+    grid-column: 1 / -1;
+    justify-self: center;
+    margin-top: 5px;
 }
 
 .portfolio-card > a:first-child:hover {
