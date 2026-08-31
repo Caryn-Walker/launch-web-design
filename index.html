@@ -172,7 +172,35 @@
             font-weight: bold;
             margin-right: 10px;
         }
+.extras-heading {
+    position: relative;
+    text-align: center;
+    color: #4b176d;
+    font-size: 2.3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
 
+.extras-heading::before {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 3px;
+    background: #e889cf;
+    border-radius: 3px;
+    margin: 0 auto 14px;
+}
+
+.extras-heading::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    background: #6b2b80;
+    border-radius: 3px;
+    margin: 14px auto 0;
+}
       .extras {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -686,7 +714,7 @@
 
     <div class="section-inner">
 
-        <h2>Add What You Need</h2>
+        <h2 class="extras-heading">Add What You Need</h2>
 
         <p class="intro">
             Start with the essentials and add extra features when your
