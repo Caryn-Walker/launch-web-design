@@ -185,14 +185,42 @@
 
 .extras .extra-box:nth-child(6) {
     grid-column: 3;
+}.extra-box {
+    background: #ffffff;
+    padding: 30px 25px;
+    border-radius: 18px;
+    text-align: center;
+    border: 1px solid #eadcf0;
+    box-shadow: 0 6px 20px rgba(80, 50, 80, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-        .extra-box {
-            background: white;
-            padding: 25px;
-            border-radius: 14px;
-            text-align: center;
-            box-shadow: 0 3px 15px rgba(80,50,80,0.08);
-        }
+
+.extra-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(80, 50, 80, 0.13);
+}
+
+.extra-box h3 {
+    color: #4b176d;
+    font-size: 1.35rem;
+    margin-bottom: 12px;
+}
+
+.extra-box h3::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 4px;
+    background: #e889cf;
+    border-radius: 4px;
+    margin: 12px auto 18px;
+}
+
+.extra-box p {
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: #252538;
+}
 
         .extra-box h3 {
             color: #6d4b7d;
