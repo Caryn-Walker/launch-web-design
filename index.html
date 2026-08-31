@@ -267,11 +267,41 @@
             color: #9a527b;
             margin-bottom: 10px;
         }
+.portfolio-section {
+    text-align: center;
+    background: #f5edf7;
+    padding: 65px 25px 50px;
+    margin-top: 75px;
+}
+        .portfolio-heading {
+    position: relative;
+    text-align: center;
+    color: #4b176d;
+    font-size: 2.3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0 0 12px;
+}
 
-        .portfolio {
-            text-align: center;
-            background: #f5edf7;
-        }
+.portfolio-heading::before {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 3px;
+    background: #e889cf;
+    border-radius: 3px;
+    margin: 0 auto 14px;
+}
+
+.portfolio-heading::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    background: #6b2b80;
+    border-radius: 3px;
+    margin: 14px auto 0;
+}
 .portfolio-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -292,7 +322,7 @@
     gap: 55px;
     align-items: center;
 }
-        }
+        
         .portfolio-card img {
     width: 100%;
     display: block;
@@ -475,10 +505,8 @@
         width: 100%;
         max-width: 300px;
     }
-}
-}
-}
-            }
+
+        
        /* =========================
    LAUNCH HERO SECTION
    ========================= */
@@ -592,7 +620,7 @@
     .hero-price strong {
         font-size: 30px;
     }
-} }
+
     </style>
 </head>
 
@@ -757,9 +785,9 @@
 
     </div>
 
-</section>
+<section class="portfolio-section">
 
-    <h2 id="portfolio">See What I've Been Working On</h2>
+    <h2 class="portfolio-heading">See What I've Been Working On</h2>
 <div class="portfolio-grid">
  <div class="portfolio-card">
 
