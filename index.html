@@ -479,6 +479,222 @@
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(80,50,80,0.25);
 }
+        /* ===== PORTFOLIO SECTION - CLEAN MODERN STYLE ===== */
+
+.portfolio-section {
+    text-align: center;
+    background: #f5edf7;
+    padding: 55px 25px 60px;
+    margin-top: 65px;
+}
+
+/* Main portfolio heading */
+.portfolio-heading {
+    position: relative;
+    text-align: center;
+    color: #4b176d;
+    font-size: 2.3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0 0 45px;
+}
+
+/* Pink accent above heading */
+.portfolio-heading::before {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 4px;
+    background: #e889cf;
+    border-radius: 3px;
+    margin: 0 auto 14px;
+}
+
+/* Purple accent underneath heading */
+.portfolio-heading::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    background: #6b2b80;
+    border-radius: 3px;
+    margin: 14px auto 0;
+}
+
+
+/* ===== PROJECT CARD ===== */
+
+.portfolio-card {
+    background: white;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 55px;
+    border-radius: 22px;
+    box-shadow: 0 5px 20px rgba(80,50,80,0.10);
+
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 55px;
+    align-items: center;
+}
+
+
+/* Website image */
+
+.portfolio-card img {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-card img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(80,50,80,0.18);
+}
+
+
+/* ===== PROJECT TITLE ===== */
+
+.portfolio-card h3 {
+    color: #4b176d;
+    font-size: 2.15rem;
+    font-weight: 700;
+    margin: 0 0 28px;
+}
+
+/* Pink line above project title */
+.portfolio-card h3::before {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 4px;
+    background: #e889cf;
+    border-radius: 3px;
+    margin: 0 auto 20px;
+}
+
+/* Purple line underneath */
+.portfolio-card h3::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    background: #6b2b80;
+    border-radius: 3px;
+    margin: 18px auto 25px;
+}
+
+
+/* Project description */
+
+.portfolio-card > div > p {
+    font-size: 1.15rem;
+    line-height: 1.65;
+    color: #252538;
+    margin-bottom: 35px;
+}
+
+
+/* ===== CHECKED FEATURES ===== */
+
+.portfolio-features {
+    text-align: left;
+    margin: 20px 0 35px;
+}
+
+.portfolio-features div {
+    position: relative;
+    font-size: 1.15rem;
+    color: #252538;
+    margin: 18px 0;
+    padding-left: 65px;
+    line-height: 1.4;
+}
+
+/* Pink circle with tick */
+.portfolio-features div::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 42px;
+    height: 42px;
+
+    border: 3px solid #ed4cb0;
+    border-radius: 50%;
+
+    color: #6b2b80;
+    font-size: 27px;
+    font-weight: 700;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ===== LIVE WEBSITE BUTTON ===== */
+
+.portfolio-card .button {
+    display: inline-block;
+    background: #85218f;
+    color: white;
+    padding: 15px 38px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(80,30,100,0.18);
+    transition: all 0.3s ease;
+}
+
+.portfolio-card .button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(80,30,100,0.25);
+}
+
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 800px) {
+
+    .portfolio-section {
+        padding: 45px 18px;
+    }
+
+    .portfolio-heading {
+        font-size: 1.9rem;
+        margin-bottom: 35px;
+    }
+
+    .portfolio-card {
+        grid-template-columns: 1fr;
+        padding: 30px 22px;
+        gap: 30px;
+    }
+
+    .portfolio-card h3 {
+        font-size: 1.8rem;
+    }
+
+    .portfolio-features {
+        margin-top: 20px;
+    }
+
+    .portfolio-features div {
+        font-size: 1rem;
+        padding-left: 55px;
+    }
+
+    .portfolio-features div::before {
+        width: 36px;
+        height: 36px;
+        font-size: 23px;
+    }
+}
 
         .contact {
             background: linear-gradient(135deg, #6d4b7d, #a96b91);
