@@ -266,7 +266,25 @@
 #why-choose-us h2 {
     margin-bottom: 20px;
 }
+#why-choose-us h2::before {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 4px;
+    background: #e889cf;
+    border-radius: 3px;
+    margin: 0 auto 14px;
+}
 
+#why-choose-us h2::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    background: #6b2b80;
+    border-radius: 3px;
+    margin: 14px auto 0;
+}
 #why-choose-us .intro {
     margin-bottom: 40px;
 }
