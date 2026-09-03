@@ -71,6 +71,9 @@ nav {
   background: #4d3859;
   text-align: center;
   padding: 14px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 nav a {
@@ -596,6 +599,11 @@ footer {
 
 /* ==========================================================
    HERO
+   Single, canonical hero definition. (The old file defined
+   .hero twice, and a "Mobile" block outside any @media query
+   was silently overriding the desktop styles at all screen
+   sizes — fixed by folding this into one real @media rule
+   at the bottom of the file.)
    ========================================================== */
 .hero {
   padding: 90px 20px 100px;
