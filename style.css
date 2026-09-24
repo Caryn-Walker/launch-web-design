@@ -28,13 +28,11 @@
   --font-display: 'Fraunces', serif;
   --font-body: 'Inter', Arial, Helvetica, sans-serif;
 }
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-
 body {
   font-family: var(--font-body);
   color: var(--text-body);
