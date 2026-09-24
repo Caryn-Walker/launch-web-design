@@ -412,8 +412,8 @@ h2 {
 .portfolio-card h3.section-heading {
   font-size: 2.15rem;
   margin: 0 0 30px;
+  text-align: center;
 }
-
 .portfolio-card > div > p {
   text-align: center;
   color: #252538;
