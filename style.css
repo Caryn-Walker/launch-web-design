@@ -167,6 +167,40 @@ h2 {
 }
 
 /* ---------- package ---------- */
+
+.offer-package {
+  border-top-color: var(--magenta-strong);
+  text-align: center;
+}
+
+.offer-tag {
+  display: inline-block;
+  background: var(--magenta-strong);
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+}
+
+.offer-package .price-was {
+  text-decoration: line-through;
+  color: var(--text-softer);
+  font-size: 20px;
+  font-weight: normal;
+  margin-right: 10px;
+}
+
+.offer-package ul {
+  text-align: left;
+}
+
+.offer-package .button {
+  margin-top: 10px;
+}
 .package {
   background: white;
   max-width: 700px;
